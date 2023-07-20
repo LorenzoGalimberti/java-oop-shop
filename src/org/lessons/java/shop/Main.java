@@ -18,9 +18,16 @@ public class Main {
         System.out.print("inserisci l' iva del prodotto in decimali : ");
         double ivaProdotto= Double.parseDouble(scan.nextLine());
 
-        // costruzione e creazione dell' istanza
 
-        Prodotto product= new Prodotto(nomeProdotto,descrizioneProdotto,prezzoProdotto,ivaProdotto);
+
+        System.out.print("inserisci la categoria del prodotto : ");
+        String categoriaProdotto= scan.nextLine();
+
+        System.out.print("inserisci la descrizione della categoria del prodotto : ");
+        String descrizioneCategoriaProdotto= scan.nextLine();
+        // costruzione e creazione dell' istanza
+        Categoria category=new Categoria(categoriaProdotto,descrizioneCategoriaProdotto);
+        Prodotto product= new Prodotto(nomeProdotto,descrizioneProdotto,prezzoProdotto,ivaProdotto,category);
 
         System.out.println(product);
 

@@ -14,11 +14,11 @@ public class Prodotto {
     private String descrizione;
     private double prezzo;
     private double iva;
-
+    private Categoria category;
 
     //COSTRUTTORI
 
-    public Prodotto( String nome, String descrizione, double prezzo,double iva) {
+    public Prodotto( String nome, String descrizione, double prezzo,double iva ,Categoria categoria) {
         // Create a Random object
         Random random = new Random();
 
@@ -29,6 +29,7 @@ public class Prodotto {
         this.descrizione = descrizione;
         this.prezzo=prezzo;
         this.iva = iva;
+        this.category=categoria;
     }
 
     //GETTER &SETTTER
@@ -83,8 +84,11 @@ public class Prodotto {
                 ", descrizione='" + descrizione + '\'' +
                 ", prezzo=" + prezzo +
                 ", iva=" + iva +
+                ", category=" + category.getNome() +
+                ", descrizione = " +category.getDescrizione()+
                 '}';
     }
+
     // metodo prezzo base
     public double getBasePrice(){
         return prezzo;
